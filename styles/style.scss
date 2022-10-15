@@ -12,13 +12,17 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  min-width: 300px;
 }
 
 ._container {
   width: 90%;
   margin: 0 auto;
+}
+
+body, html {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 // ----------------------------
@@ -30,10 +34,20 @@
   
   &__container {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1.5fr;
     align-items: center;
     height: inherit;
     
+  }
+  
+  &__right-content {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    align-items: center;
+  }
+  
+  &__logo {
+    height: 35px;
   }
   
   &__logo, &__link, &__search, &__button {
@@ -82,6 +96,20 @@
     grid-template-columns: auto auto;
     column-gap: 10px;
   }
+  
+  &__burger {
+    display: none;
+    cursor: pointer;
+    
+    & span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
+    }
+  }
 }
 
 .main {
@@ -98,6 +126,7 @@
     text-align: center;
     align-items: center;
     row-gap: 50px;
+    margin: 0 auto;
   }
   
   &__title {
@@ -121,6 +150,7 @@
       border: none;
       border-radius: 5px;
       color: white;
+      width: 100%;
       
       &:focus {
         outline: none;

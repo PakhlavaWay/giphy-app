@@ -46,3 +46,15 @@ searchButton.addEventListener('click', () => {
   makeRequest(valueFromInput.value)
 })
 
+makeRequest();
+
+// ------ burger 
+
+const burger = document.querySelector('.header__burger');
+const rightContent = document.querySelector('.header__right-content');
+
+burger.addEventListener('click', () => {
+   burger.classList.toggle('active');
+   rightContent.classList.toggle('active');
+})
+
