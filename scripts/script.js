@@ -32,11 +32,6 @@ function displayGifs(gifs, gifsNumber) {
   gifs.map( (gif, index) => {
     const url = gif.images.original.url;
     if (index <= gifsNumber && index > previousIndex) {
-      // gifsContainer.innerHTML += `
-        // <div class="main__gif">
-        //   <img src=${url} alt="gif">
-        // </div>
-      // `
       gifsContainer.insertAdjacentHTML('beforeend',
       `<div class="main__gif">
         <img src=${url} alt="gif">
