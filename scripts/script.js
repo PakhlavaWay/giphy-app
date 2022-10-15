@@ -46,4 +46,3 @@ searchButton.addEventListener('click', () => {
   makeRequest(valueFromInput.value)
 })
 
-// makeRequest();
